@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CinemaStar — кинотеатр в Лазаревском</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__top">
+        <div class="logo">
+          <h1>CinemaStar</h1>
+          <p>Кинотеатр в Лазаревском</p>
+        </div>
+
+        <nav class="nav">
+          <a href="#movies">Афиша</a>
+          <a href="#schedule">Расписание</a>
+          <a href="#halls">Залы</a>
+          <a href="#prices">Цены</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <p class="hero__subtitle">Современный кинотеатр</p>
+          <h2>Смотри новинки кино на большом экране</h2>
+          <p class="hero__text">
+            Афиша, удобное расписание, цены и вся нужная информация в одном месте.
+          </p>
+
+          <div class="hero__buttons">
+            <a class="button" href="#movies">Смотреть афишу</a>
+            <a class="button button--secondary" href="#schedule">Выбрать сеанс</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <h2 class="section-title">О кинотеатре</h2>
+        <p class="about__text">
+          CinemaStar — это современный кинотеатр в Лазаревском, где можно посмотреть
+          новинки кино на большом экране, выбрать удобный сеанс и провести время
+          с друзьями или всей семьёй.
+        </p>
+        <p class="about__text">
+          Мы сделали сайт таким, чтобы человек быстро нашёл афишу, расписание,
+          цены и контакты без лишних действий.
+        </p>
+      </div>
+    </section>
+
+    <section class="movies" id="movies">
+      <div class="container">
+        <h2 class="section-title">Сейчас в кино</h2>
+
+        <div class="movies__grid">
+          <article class="movie-card">
+            <div class="movie-card__content">
+              <h3>Зверополис 2</h3>
+              <p>Анимация, приключения</p>
+              <p>6+ · 1 ч 48 мин</p>
+              <a href="#schedule" class="movie-card__link">Сеансы</a>
+            </div>
+          </article>
+
+          <article class="movie-card">
+            <div class="movie-card__content">
+              <h3>Волчок</h3>
+              <p>Драма, триллер</p>
+              <p>16+ · 1 ч 37 мин</p>
+              <a href="#schedule" class="movie-card__link">Сеансы</a>
+            </div>
+          </article>
+
+          <article class="movie-card">
+            <div class="movie-card__content">
+              <h3>Невероятные приключения</h3>
+              <p>Комедия, семейный</p>
+              <p>12+ · 2 ч 05 мин</p>
+              <a href="#schedule" class="movie-card__link">Сеансы</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule" id="schedule">
+      <div class="container">
+        <h2 class="section-title">Расписание сеансов</h2>
+
+        <div class="schedule__table-wrapper">
+          <table class="schedule-table">
+            <tr>
+              <th>Фильм</th>
+              <th>Время</th>
+              <th>Возраст</th>
+              <th>Цена</th>
+            </tr>
+            <tr>
+              <td>Зверополис 2</td>
+              <td>11:20 / 16:00 / 18:10 / 20:20</td>
+              <td>6+</td>
+              <td>350 ₽</td>
+            </tr>
+            <tr>
+              <td>Волчок</td>
+              <td>13:30 / 19:40</td>
+              <td>16+</td>
+              <td>400 ₽</td>
+            </tr>
+            <tr>
+              <td>Невероятные приключения</td>
+              <td>10:10 / 14:50 / 21:00</td>
+              <td>12+</td>
+              <td>350 ₽</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="halls" id="halls">
+      <div class="container">
+        <h2 class="section-title">Наши залы</h2>
+
+        <div class="prices__grid">
+          <div class="price-card">
+            <h3>Большой зал</h3>
+            <p>Комфортные места, большой экран и качественный звук для вечерних сеансов.</p>
+          </div>
+
+          <div class="price-card">
+            <h3>3D показы</h3>
+            <p>Отдельные сеансы в формате 3D для фильмов, которые особенно хорошо смотрятся на большом экране.</p>
+          </div>
+
+          <div class="price-card">
+            <h3>Семейная атмосфера</h3>
+            <p>Удобный формат для похода в кино с детьми, друзьями и близкими.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="prices" id="prices">
+      <div class="container">
+        <h2 class="section-title">Цены</h2>
+
+        <div class="prices__grid">
+          <div class="price-card">
+            <h3>Будние дни</h3>
+            <p>от 350 ₽</p>
+          </div>
+
+          <div class="price-card">
+            <h3>Выходные</h3>
+            <p>от 400 ₽</p>
+          </div>
+
+          <div class="price-card">
+            <h3>3D сеансы</h3>
+            <p>по расписанию</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="container">
+        <h2 class="section-title">Контакты</h2>
+
+        <div class="contacts__content">
+          <div class="contacts__info">
+            <p><strong>Адрес:</strong> Лазаревское, ул. Победы, 31</p>
+            <p><strong>Телефон:</strong> +7 (918) 614-28-28</p>
+            <p><strong>Режим работы:</strong> ежедневно</p>
+          </div>
+
+          <div class="contacts__actions">
+            <a class="button" href="tel:+79186142828">Позвонить</a>
+            <a class="button button--secondary" href="#">Открыть карту</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3>CinemaStar</h3>
+          <p>Современный кинотеатр в Лазаревском</p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Контакты</h4>
+          <p>ул. Победы, 31</p>
+          <p><a href="tel:+79186142828">+7 (918) 614-28-28</a></p>
+          <p><a href="mailto:cinemastar2014@bk.ru">cinemastar2014@bk.ru</a></p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Соцсети</h4>
+          <p><a href="#">Instagram</a></p>
+          <p><a href="#">Telegram</a></p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© CinemaStar. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

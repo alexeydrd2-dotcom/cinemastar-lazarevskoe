@@ -1,0 +1,318 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0f1115;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.header {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #11141a;
+  position: sticky;
+  top: 0;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.logo p {
+  margin: 6px 0 0;
+  color: #b8bcc8;
+  font-size: 14px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #d8dbe3;
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  color: #ffffff;
+}
+
+.hero {
+  padding: 80px 0 60px;
+  background: linear-gradient(180deg, #151922 0%, #0f1115 100%);
+}
+
+.hero__content {
+  max-width: 700px;
+}
+
+.hero__subtitle {
+  margin: 0 0 12px;
+  color: #9ca3b5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+
+.hero h2 {
+  margin: 0 0 16px;
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.hero__text {
+  margin: 0 0 28px;
+  color: #c3c7d4;
+  font-size: 18px;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #11141a;
+  font-weight: bold;
+}
+
+.button--secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about,
+.movies,
+.schedule,
+.halls,
+.prices,
+.contacts {
+  padding: 70px 0;
+}
+
+.section-title {
+  margin: 0 0 28px;
+  font-size: 34px;
+}
+
+.movies__grid,
+.prices__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.movie-card {
+  background-color: #171b24;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.movie-card__content {
+  padding: 22px;
+}
+
+.movie-card h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.movie-card p {
+  margin: 0 0 8px;
+  color: #c1c6d2;
+}
+
+.movie-card__link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.schedule__table-wrapper {
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #171b24;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 18px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.schedule-table th {
+  color: #ffffff;
+  background-color: #1d2230;
+}
+
+.schedule-table td {
+  color: #d0d5df;
+}
+
+.price-card {
+  background-color: #171b24;
+  padding: 28px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.price-card h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.price-card p {
+  margin: 0;
+  color: #d0d5df;
+  font-size: 18px;
+}
+
+.contacts__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: flex-start;
+  background-color: #171b24;
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.contacts__info p {
+  margin: 0 0 12px;
+  color: #d0d5df;
+}
+
+.contacts__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .movies__grid,
+  .prices__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contacts__content,
+  .header__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h2 {
+    font-size: 36px;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 60px 0 40px;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .container {
+    width: min(100% - 24px, 1100px);
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 14px;
+  }
+}
+.footer {
+  padding: 50px 0 30px;
+  background-color: #0b0d12;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #9da4b5;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer__brand h3,
+.footer__col h4 {
+  margin: 0 0 12px;
+}
+
+.footer__brand p,
+.footer__col p {
+  margin: 0 0 10px;
+  color: #b8beca;
+}
+
+.footer__bottom {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer__bottom p {
+  margin: 0;
+  color: #8f97a8;
+}
+
+.about__text {
+  max-width: 800px;
+  margin: 0 0 16px;
+  color: #c3c7d4;
+  font-size: 18px;
+}
