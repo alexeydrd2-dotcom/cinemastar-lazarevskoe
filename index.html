@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CinemaStar — кинотеатр в Лазаревском</title>
+  <title>CinemaStar - кинотеатр в Лазаревском</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -22,8 +22,7 @@
           <a href="#movies">Афиша</a>
           <a href="#schedule">Расписание</a>
           <a href="#halls">Залы</a>
-          <a href="#prices">Цены</a>
-          <a href="#contacts">Контакты</a>
+          <a href="#location">Как добраться</a>
         </nav>
       </div>
     </div>
@@ -42,6 +41,7 @@
           <div class="hero__buttons">
             <a class="button" href="#movies">Смотреть афишу</a>
             <a class="button button--secondary" href="#schedule">Выбрать сеанс</a>
+            <a class="button button--secondary" href="tel:+79186142828">Позвонить</a>
           </div>
         </div>
       </div>
@@ -49,16 +49,32 @@
 
     <section class="about">
       <div class="container">
-        <h2 class="section-title">О кинотеатре</h2>
-        <p class="about__text">
-          CinemaStar — это современный кинотеатр в Лазаревском, где можно посмотреть
-          новинки кино на большом экране, выбрать удобный сеанс и провести время
-          с друзьями или всей семьёй.
-        </p>
-        <p class="about__text">
-          Мы сделали сайт таким, чтобы человек быстро нашёл афишу, расписание,
-          цены и контакты без лишних действий.
-        </p>
+        <div class="about__layout">
+          <div class="about__content">
+            <h2 class="section-title">О кинотеатре</h2>
+            <p class="about__text">
+              CinemaStar - это современный кинотеатр в Лазаревском, где можно посмотреть новинки кино на большом экране,
+              выбрать удобный сеанс и провести время с друзьями или всей семьёй.
+            </p>
+            <p class="about__text">
+              Мы сделали сайт таким, чтобы человек быстро нашёл афишу, расписание, цены и контакты без лишних действий.
+            </p>
+          </div>
+
+          <div class="about__gallery" aria-label="Галерея кинотеатра CinemaStar">
+            <div class="about__gallery-main">
+              <img class="about__image about__image--featured js-lightbox-image" src="images/location/facade.webp" alt="Фасад кинотеатра CinemaStar">
+            </div>
+            <div class="about__gallery-side">
+              <div class="about__gallery-item">
+                <img class="about__image js-lightbox-image" src="images/halls/hall-main-3.webp" alt="Зал кинотеатра CinemaStar">
+              </div>
+              <div class="about__gallery-item">
+                <img class="about__image js-lightbox-image" src="images/halls/reception.webp" alt="Ресепшен и касса CinemaStar">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -68,28 +84,37 @@
 
         <div class="movies__grid">
           <article class="movie-card">
+            <div class="movie-card__poster">
+              <img class="movie-card__image" src="images/posters/scream7.webp" alt="Постер фильма Крик 7">
+            </div>
             <div class="movie-card__content">
-              <h3>Зверополис 2</h3>
-              <p>Анимация, приключения</p>
-              <p>6+ · 1 ч 48 мин</p>
+              <h3>Крик 7</h3>
+              <p>Ужасы, триллер</p>
+              <p>18+ • 1 ч 49 мин</p>
               <a href="#schedule" class="movie-card__link">Сеансы</a>
             </div>
           </article>
 
           <article class="movie-card">
+            <div class="movie-card__poster">
+              <img class="movie-card__image" src="images/posters/hoppers.webp" alt="Постер фильма Прыгуны">
+            </div>
             <div class="movie-card__content">
-              <h3>Волчок</h3>
-              <p>Драма, триллер</p>
-              <p>16+ · 1 ч 37 мин</p>
+              <h3>Прыгуны</h3>
+              <p>Мультфильм, фантастика, комедия</p>
+              <p>6+ • 1 ч 44 мин</p>
               <a href="#schedule" class="movie-card__link">Сеансы</a>
             </div>
           </article>
 
           <article class="movie-card">
+            <div class="movie-card__poster">
+              <img class="movie-card__image" src="images/posters/korolek-moey-lyubvi.webp" alt="Постер фильма Королёк моей любви">
+            </div>
             <div class="movie-card__content">
-              <h3>Невероятные приключения</h3>
-              <p>Комедия, семейный</p>
-              <p>12+ · 2 ч 05 мин</p>
+              <h3>Королёк моей любви</h3>
+              <p>Комедия, мюзикл</p>
+              <p>16+ • 1 ч 51 мин</p>
               <a href="#schedule" class="movie-card__link">Сеансы</a>
             </div>
           </article>
@@ -100,6 +125,7 @@
     <section class="schedule" id="schedule">
       <div class="container">
         <h2 class="section-title">Расписание сеансов</h2>
+        <p class="schedule__note">Актуальная стоимость указана рядом с каждым сеансом.</p>
 
         <div class="schedule__table-wrapper">
           <table class="schedule-table">
@@ -110,22 +136,22 @@
               <th>Цена</th>
             </tr>
             <tr>
-              <td>Зверополис 2</td>
-              <td>11:20 / 16:00 / 18:10 / 20:20</td>
+              <td>Крик 7</td>
+              <td>10:00</td>
+              <td>18+</td>
+              <td>450 ₽</td>
+            </tr>
+            <tr>
+              <td>Прыгуны</td>
+              <td>12:00 / 14:00</td>
               <td>6+</td>
-              <td>350 ₽</td>
+              <td>450 ₽</td>
             </tr>
             <tr>
-              <td>Волчок</td>
-              <td>13:30 / 19:40</td>
+              <td>Королёк моей любви</td>
+              <td>16:00 / 18:10 / 20:20</td>
               <td>16+</td>
-              <td>400 ₽</td>
-            </tr>
-            <tr>
-              <td>Невероятные приключения</td>
-              <td>10:10 / 14:50 / 21:00</td>
-              <td>12+</td>
-              <td>350 ₽</td>
+              <td>450 ₽</td>
             </tr>
           </table>
         </div>
@@ -136,67 +162,94 @@
       <div class="container">
         <h2 class="section-title">Наши залы</h2>
 
-        <div class="prices__grid">
-          <div class="price-card">
-            <h3>Большой зал</h3>
-            <p>Комфортные места, большой экран и качественный звук для вечерних сеансов.</p>
+        <div class="prices__grid halls__grid">
+          <div class="price-card hall-card">
+            <h3>Обычный зал</h3>
+            <p>Фильмы из текущего проката.</p>
+
+            <div class="hall-card__photos">
+              <div class="hall-card__media">
+                <img class="hall-card__image js-lightbox-image" src="images/halls/hall-main-1.webp" alt="Обычный зал CinemaStar">
+              </div>
+              <div class="hall-card__media">
+                <img class="hall-card__image js-lightbox-image" src="images/halls/hall-main-2.webp" alt="Обычный зал CinemaStar, второй ракурс">
+              </div>
+            </div>
           </div>
 
-          <div class="price-card">
-            <h3>3D показы</h3>
-            <p>Отдельные сеансы в формате 3D для фильмов, которые особенно хорошо смотрятся на большом экране.</p>
+          <div class="price-card hall-card">
+            <h3>VIP-зал</h3>
+            <p>Можно смотреть фильмы вне проката или прийти со своим фильмом.</p>
+
+            <div class="hall-card__photos hall-card__photos--single">
+              <div class="hall-card__media">
+                <img class="hall-card__image js-lightbox-image" src="images/halls/hall-vip-1.webp" alt="VIP-зал CinemaStar">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hall-service-card price-card">
+          <div class="hall-service-card__content">
+            <h3>Ресепшен, касса и бар</h3>
+            <p>В этой зоне находятся касса, стойка администратора и бар с напитками и снеками перед началом сеанса.</p>
           </div>
 
-          <div class="price-card">
-            <h3>Семейная атмосфера</h3>
-            <p>Удобный формат для похода в кино с детьми, друзьями и близкими.</p>
+          <div class="hall-service-card__gallery">
+            <div class="hall-service-card__media">
+              <img class="hall-service-card__image js-lightbox-image" src="images/halls/reception.webp" alt="Ресепшен и касса CinemaStar">
+            </div>
+            <div class="hall-service-card__media">
+              <img class="hall-service-card__image js-lightbox-image" src="images/halls/bar.webp" alt="Бар CinemaStar">
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="prices" id="prices">
+    <section class="location" id="location">
       <div class="container">
-        <h2 class="section-title">Цены</h2>
+        <div class="location__intro">
+          <h2 class="section-title">Как добраться</h2>
+          <p class="location__text">
+            Кинотеатр удобно расположен в центре Лазаревского. 
+          </p>
+        </div>
 
-        <div class="prices__grid">
-          <div class="price-card">
-            <h3>Будние дни</h3>
-            <p>от 350 ₽</p>
+        <div class="location__layout">
+          <div class="location__media">
+            <img class="location__image location__image--featured js-lightbox-image" src="images/location/facade.webp" alt="Фасад кинотеатра CinemaStar">
+
+            <div class="location__map">
+              <iframe
+                class="location__map-frame"
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A7247aa03271a77b556e03fa3b2aa896f1baea0b6b5a1a4b61f39c616f99166ee&amp;source=constructor"
+                title="Карта CinemaStar на Яндекс Картах"
+                loading="lazy"
+                allowfullscreen></iframe>
+            </div>
           </div>
 
-          <div class="price-card">
-            <h3>Выходные</h3>
-            <p>от 400 ₽</p>
-          </div>
+          <div class="location__details">
+            <article class="location-card">
+              <p class="location-card__label">Адрес</p>
+              <h3>Лазаревское, ул. Победы, 31</h3>
+              <p>Основной вход в кинотеатр находится со стороны улицы Победы.</p>
+            </article>
 
-          <div class="price-card">
-            <h3>3D сеансы</h3>
-            <p>по расписанию</p>
+            <article class="location-card">
+              <p class="location-card__label">Ориентир</p>
+              <h3>Напротив центральной площади</h3>
+              <p>Нас легко найти по вечерней вывеске CinemaStar и высокому входному порталу.</p>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="contacts" id="contacts">
-      <div class="container">
-        <h2 class="section-title">Контакты</h2>
-
-        <div class="contacts__content">
-          <div class="contacts__info">
-            <p><strong>Адрес:</strong> Лазаревское, ул. Победы, 31</p>
-            <p><strong>Телефон:</strong> +7 (918) 614-28-28</p>
-            <p><strong>Режим работы:</strong> ежедневно</p>
-          </div>
-
-          <div class="contacts__actions">
-            <a class="button" href="tel:+79186142828">Позвонить</a>
-            <a class="button button--secondary" href="#">Открыть карту</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
+
+  <a class="mobile-call-button" href="tel:+79186142828">Позвонить</a>
 
   <footer class="footer">
     <div class="container">
@@ -215,8 +268,8 @@
 
         <div class="footer__col">
           <h4>Соцсети</h4>
-          <p><a href="#">Instagram</a></p>
-          <p><a href="#">Telegram</a></p>
+          <p><a href="https://vk.com/id271211198" target="_blank" rel="noopener noreferrer">VK</a></p>
+          <p><a href="https://t.me/CinemaStar3dLazarevskoe" target="_blank" rel="noopener noreferrer">Telegram</a></p>
         </div>
       </div>
 
@@ -225,6 +278,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 
 </body>
 
