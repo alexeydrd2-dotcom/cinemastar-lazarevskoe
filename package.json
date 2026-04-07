@@ -1,0 +1,7 @@
+{
+  "name": "cinemastar-site",
+  "private": true,
+  "scripts": {
+    "update-movies": "node scripts/update-movies.mjs"
+  }
+}

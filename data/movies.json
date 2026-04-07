@@ -1,0 +1,59 @@
+{
+  "movies": [
+    {
+      "id": "scream7",
+      "title": "Андрейка наступает 7",
+      "description": "Это жесть, пробудилось древнее зло",
+      "genre": "Ужасы, триллер",
+      "age": "18+",
+      "duration": "1 ч 49 мин",
+      "poster": "images/posters/andreyka.jpg",
+      "price": "450р",
+      "sessions": [
+        "10.00"
+      ]
+    },
+    {
+      "id": "hoppers",
+      "title": "Прыгуны",
+      "description": "прыгаем",
+      "genre": "Мультфильм, фантастика, комедия",
+      "age": "6+",
+      "duration": "1 ч 44 мин",
+      "poster": "images/posters/hoppers.webp",
+      "price": "450р",
+      "sessions": [
+        "12.00",
+        "14.00"
+      ]
+    },
+    {
+      "id": "korolek",
+      "title": "Королёк моей любви",
+      "description": "боливуд",
+      "genre": "Комедия, мюзикл",
+      "age": "16+",
+      "duration": "1 ч 51 мин",
+      "poster": "images/posters/korolek-moey-lyubvi.webp",
+      "price": "450р",
+      "sessions": [
+        "16.00",
+        "18.10",
+        "20.20"
+      ]
+    },
+    {
+      "id": "polina",
+      "title": "Backrooms",
+      "description": "салаир новый уровень бекрумс",
+      "genre": "Ужасы, триллер",
+      "age": "21+",
+      "duration": "3 ч 33 мин",
+      "poster": "images/posters/polina.jpg",
+      "price": "450р",
+      "sessions": [
+        "23.00"
+      ]
+    }
+  ]
+}
