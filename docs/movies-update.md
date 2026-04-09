@@ -94,6 +94,46 @@ npm run update-movies
 - валидирует обязательные значения
 - собирает `data/movies.json` в текущем формате сайта
 
+## GitHub Actions
+
+Для автоматического обновления афиши можно использовать workflow `.github/workflows/update-movies.yml`.
+
+### Что нужно настроить в GitHub
+
+В репозитории откройте `Settings -> Secrets and variables -> Actions` и создайте variables или secrets:
+
+- `MOVIES_SOURCE`
+- `GOOGLE_SHEETS_CSV_URL`
+
+или:
+
+- `GOOGLE_SHEETS_ID`
+- `GOOGLE_SHEETS_GID`
+
+или:
+
+- `GOOGLE_SHEETS_ID`
+- `GOOGLE_SHEETS_SHEET_NAME`
+
+`MOVIES_SOURCE` можно не задавать, если достаточно автоопределения по Google-переменным, но для явного режима можно указать `google-sheets`.
+
+### Как запустить вручную
+
+1. Откройте вкладку `Actions` в GitHub.
+2. Выберите workflow `Update movies`.
+3. Нажмите `Run workflow`.
+4. Выберите ветку и подтвердите запуск.
+
+### Как работает автоматическое обновление
+
+- workflow запускается вручную через `workflow_dispatch`
+- workflow запускается по расписанию раз в день, в примере выше это `03:00 UTC`
+- устанавливает Node.js
+- запускает `npm run update-movies`
+- проверяет, изменился ли `data/movies.json`
+- коммитит и пушит обратно только реальные изменения в `data/movies.json`
+- локальный запуск `npm run update-movies` продолжает работать без изменений
+
 ## Примечания
 
 - Локальный `data/movies.source.json` остаётся как fallback и удобный режим для ручной работы.

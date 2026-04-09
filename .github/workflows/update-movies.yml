@@ -1,0 +1,56 @@
+name: Update movies
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-movies:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Update movies.json
+        env:
+          MOVIES_SOURCE: ${{ vars.MOVIES_SOURCE || secrets.MOVIES_SOURCE }}
+          GOOGLE_SHEETS_CSV_URL: ${{ vars.GOOGLE_SHEETS_CSV_URL || secrets.GOOGLE_SHEETS_CSV_URL }}
+          GOOGLE_SHEETS_ID: ${{ vars.GOOGLE_SHEETS_ID || secrets.GOOGLE_SHEETS_ID }}
+          GOOGLE_SHEETS_GID: ${{ vars.GOOGLE_SHEETS_GID || secrets.GOOGLE_SHEETS_GID }}
+          GOOGLE_SHEETS_SHEET_NAME: ${{ vars.GOOGLE_SHEETS_SHEET_NAME || secrets.GOOGLE_SHEETS_SHEET_NAME }}
+        run: npm run update-movies
+
+      - name: Check for changes
+        id: changes
+        shell: bash
+        run: |
+          if git diff --quiet -- data/movies.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit updated movies.json
+        if: steps.changes.outputs.changed == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/movies.json
+          git commit -m "chore: update movies data"
+
+      - name: Push changes
+        if: steps.changes.outputs.changed == 'true'
+        run: git push
